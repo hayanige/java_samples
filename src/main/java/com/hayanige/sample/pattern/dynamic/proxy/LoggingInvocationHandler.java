@@ -5,11 +5,11 @@ import java.lang.reflect.Method;
 
 public class LoggingInvocationHandler<T> implements InvocationHandler {
   final T underlying;
-  
+
   public LoggingInvocationHandler(T underlying) {
     this.underlying = underlying;
   }
-  
+
   public Object invoke(Object proxy, Method method, Object[] args)
           throws Throwable {
       StringBuffer sb = new StringBuffer();
